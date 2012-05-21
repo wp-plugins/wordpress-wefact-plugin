@@ -1,0 +1,514 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WeFact\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-27 12:15+0100\n"
+"PO-Revision-Date: 2012-05-17 10:59+0100\n"
+"Last-Translator: Rick de Jong <rick@tussendoor.nl>\n"
+"Language-Team: Tussendoor internet & marketing <http://www.tussendoor.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;gettext;gettext_noop;_;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wefact_admin.php:62
+#: wefact_admin.php:263
+#: wefact_dashboard_link_list_table.php:233
+#: wefact_debtors_list_table.php:444
+#: wefact_invoices_list_table.php:447
+#: views/view_about.php:3
+#: views/view_debtor.php:3
+#: views/view_invoice.php:3
+#: views/view_options.php:4
+msgid "WeFact"
+msgstr "WeFact"
+
+#: wefact_admin.php:62
+msgid "Wefact"
+msgstr "WeFact"
+
+#: wefact_admin.php:63
+msgid "Invoices"
+msgstr "Facturen"
+
+#: wefact_admin.php:64
+msgid "Debtors"
+msgstr "Debiteuren"
+
+#: wefact_admin.php:65
+msgid "Settings"
+msgstr "Instellingen"
+
+#: wefact_admin.php:66
+#: views/view_about.php:3
+msgid "About"
+msgstr "Over WeFact"
+
+#: wefact_dashboard_link_list_table.php:72
+#: wefact_invoices_list_table.php:151
+msgid "Concept"
+msgstr "Concept"
+
+#: wefact_dashboard_link_list_table.php:73
+#: wefact_invoices_list_table.php:152
+#: views/view_invoice.php:42
+#: views/view_invoice.php:86
+msgid "Sent"
+msgstr "Verzonden"
+
+#: wefact_dashboard_link_list_table.php:74
+#: wefact_invoices_list_table.php:153
+#: views/view_invoice.php:87
+msgid "Partly paid"
+msgstr "Deelbetaling"
+
+#: wefact_dashboard_link_list_table.php:75
+#: wefact_invoices_list_table.php:154
+#: views/view_invoice.php:88
+msgid "Paid"
+msgstr "Betaald"
+
+#: wefact_dashboard_link_list_table.php:76
+#: wefact_invoices_list_table.php:155
+#: views/view_invoice.php:89
+msgid "Credit invoice"
+msgstr "Creditfactuur"
+
+#: wefact_dashboard_link_list_table.php:77
+#: wefact_invoices_list_table.php:156
+#: views/view_invoice.php:90
+msgid "Expired"
+msgstr "Verlopen"
+
+#: wefact_dashboard_link_list_table.php:97
+#: wefact_invoices_list_table.php:235
+msgid "InvoiceCode"
+msgstr "Factuurnummer"
+
+#: wefact_dashboard_link_list_table.php:98
+#: wefact_debtors_list_table.php:228
+#: wefact_invoices_list_table.php:236
+msgid "CompanyName"
+msgstr "Bedrijfsnaam"
+
+#: wefact_dashboard_link_list_table.php:99
+#: wefact_debtors_list_table.php:229
+#: wefact_invoices_list_table.php:237
+#: views/view_debtor.php:24
+#: views/view_debtor.php:26
+#: views/view_invoice.php:76
+msgid "Contact"
+msgstr "Contact"
+
+#: wefact_dashboard_link_list_table.php:100
+#: wefact_invoices_list_table.php:238
+msgid "AmountExcl"
+msgstr "Bedrag excl."
+
+#: wefact_dashboard_link_list_table.php:101
+#: wefact_invoices_list_table.php:239
+msgid "AmountIncl"
+msgstr "Bedrag incl."
+
+#: wefact_dashboard_link_list_table.php:102
+#: wefact_invoices_list_table.php:240
+#: views/view_invoice.php:34
+msgid "Date"
+msgstr "Datum"
+
+#: wefact_dashboard_link_list_table.php:103
+#: wefact_invoices_list_table.php:241
+#: views/view_invoice.php:84
+msgid "Status"
+msgstr "Status"
+
+#: wefact_dashboard_link_list_table.php:117
+#: wefact_debtors_list_table.php:171
+#: wefact_invoices_list_table.php:186
+msgid "View"
+msgstr "Bekijken"
+
+#: wefact_dashboard_link_list_table.php:125
+#: wefact_invoices_list_table.php:314
+msgid "If you are expecting to see items and there are none, please check your site url and the security key."
+msgstr "Verwacht u hier gegevens te vinden, maar ziet u niks? Controleer dan a.u.b. uw ingegeven website / API URL en security code"
+
+#: wefact_dashboard_link_list_table.php:233
+msgid "Dashboard invoices list"
+msgstr "Dashboard facturen overzicht"
+
+#: wefact_debtors_list_table.php:227
+msgid "DebtorCode"
+msgstr "Debiteur code"
+
+#: wefact_debtors_list_table.php:230
+msgid "EmailAddress"
+msgstr "E-mailadres"
+
+#: wefact_debtors_list_table.php:444
+msgid "Debtors list"
+msgstr "Debiteuren overzicht"
+
+#: wefact_functions.php:6
+msgid "Please enter your website URL and your security key."
+msgstr "Vul a.u.b. uw website (API) url & de security code in"
+
+#: wefact_invoices_list_table.php:447
+msgid "Invoices list"
+msgstr "Facturen overzicht"
+
+#: views/view_about.php:11
+#: views/view_about.php:21
+msgid "more wordpress plugins"
+msgstr "Meer Wordpress plugins"
+
+#: views/view_about.php:12
+#: views/view_about.php:22
+msgid "for questions"
+msgstr "voor vragen"
+
+#: views/view_about.php:15
+msgid "Dutch text"
+msgstr "WeFact WordPress plugin is ontwikkeld door Tussendoor internet & marketing. "
+
+#: views/view_about.php:25
+msgid "English text"
+msgstr "Here will come the english about text, this will follow later. First of all you can take a look at: <a href=\"http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin\" target=\"_blank\">this page</a>."
+
+#: views/view_debtor.php:3
+msgid "Debtor"
+msgstr "Debiteur"
+
+#: views/view_debtor.php:10
+#: views/view_debtor.php:12
+msgid "Debtor information"
+msgstr "Debiteur informatie"
+
+#: views/view_debtor.php:18
+#: views/view_invoice.php:19
+msgid "Debtor code"
+msgstr "Debiteur code"
+
+#: views/view_debtor.php:20
+#: views/view_debtor.php:60
+#: views/view_invoice.php:70
+msgid "Company name"
+msgstr "Bedrijfsnaam"
+
+#: views/view_debtor.php:30
+#: views/view_debtor.php:38
+#: views/view_invoice.php:82
+msgid "Address"
+msgstr "Adres"
+
+#: views/view_debtor.php:32
+#: views/view_invoice.php:27
+msgid "Invoice method"
+msgstr "Factuur methode"
+
+#: views/view_debtor.php:36
+#: views/view_debtor.php:44
+#: views/view_invoice.php:94
+msgid "Zip code"
+msgstr "Postcode"
+
+#: views/view_debtor.php:36
+#: views/view_debtor.php:44
+#: views/view_invoice.php:100
+msgid "City"
+msgstr "Stad"
+
+#: views/view_debtor.php:42
+#: views/view_debtor.php:50
+#: views/view_invoice.php:106
+msgid "Country"
+msgstr "Land"
+
+#: views/view_debtor.php:48
+#: views/view_debtor.php:56
+#: views/view_invoice.php:112
+msgid "Email address"
+msgstr "E-mailadres"
+
+#: views/view_debtor.php:66
+msgid "Legal form"
+msgstr "Rechtsvorm"
+
+#: views/view_debtor.php:68
+msgid "Invoice authorisation"
+msgstr "Machtiging"
+
+#: views/view_debtor.php:72
+msgid "Company number"
+msgstr "Bedrijfsnummer"
+
+#: views/view_debtor.php:74
+msgid "Account number"
+msgstr "Rekeningnummer"
+
+#: views/view_debtor.php:78
+msgid "Tax number"
+msgstr "BTW-nummer"
+
+#: views/view_debtor.php:80
+msgid "Account name"
+msgstr "Ten name van"
+
+#: views/view_debtor.php:86
+msgid "Account bank"
+msgstr "Bank"
+
+#: views/view_debtor.php:90
+msgid "Phone number"
+msgstr "Tel nr"
+
+#: views/view_debtor.php:92
+msgid "Account Iban"
+msgstr "IBAN nummer"
+
+#: views/view_debtor.php:96
+msgid "Fax number"
+msgstr "Fax nummer"
+
+#: views/view_debtor.php:98
+msgid "Account swift"
+msgstr "BIC/SWIFT code"
+
+#: views/view_debtor.php:102
+msgid "Second Email address"
+msgstr "Tweede E-mailadres"
+
+#: views/view_debtor.php:104
+msgid "Account city"
+msgstr "Plaats"
+
+#: views/view_debtor.php:110
+#: views/view_invoice.php:121
+msgid "Back to overview"
+msgstr "Terug naar overzicht"
+
+#: views/view_invoice.php:3
+msgid "Invoice"
+msgstr "Factuur"
+
+#: views/view_invoice.php:11
+#: views/view_invoice.php:13
+msgid "Invoice information"
+msgstr "Factuur informatie"
+
+#: views/view_invoice.php:21
+msgid "Authorisation"
+msgstr "Machtiging"
+
+#: views/view_invoice.php:25
+msgid "Invoice code"
+msgstr "Factuur code"
+
+#: views/view_invoice.php:28
+msgid "By email"
+msgstr "Per e-mail"
+
+#: views/view_invoice.php:29
+msgid "By post"
+msgstr "Per post"
+
+#: views/view_invoice.php:30
+msgid "By email by post"
+msgstr "Per e-mail per post"
+
+#: views/view_invoice.php:36
+msgid "Sent date"
+msgstr "Verzonden op"
+
+#: views/view_invoice.php:40
+msgid "Description"
+msgstr "Omschrijving"
+
+#: views/view_invoice.php:46
+msgid "Term"
+msgstr "Termijn"
+
+#: views/view_invoice.php:48
+msgid "Reminders"
+msgstr "Herinneringen"
+
+#: views/view_invoice.php:52
+msgid "Discount"
+msgstr "Korting"
+
+#: views/view_invoice.php:54
+msgid "Reminder date"
+msgstr "Herinnering datum"
+
+#: views/view_invoice.php:58
+msgid "Reference number"
+msgstr "Referentie"
+
+#: views/view_invoice.php:60
+msgid "Summations"
+msgstr "Aanmaningen"
+
+#: views/view_invoice.php:66
+msgid "Summation date"
+msgstr "Aanmaning datum"
+
+#: views/view_invoice.php:72
+msgid "Payment method"
+msgstr "Betaalmethode"
+
+#: views/view_invoice.php:78
+msgid "Transaction ID"
+msgstr "Transactie ID"
+
+#: views/view_invoice.php:85
+msgid "Draft invoice"
+msgstr "Conceptfactuur"
+
+#: views/view_invoice.php:102
+msgid "Amount excl"
+msgstr "Bedrag excl."
+
+#: views/view_invoice.php:108
+msgid "Amount incl"
+msgstr "Bedrag incl."
+
+#: views/view_invoice.php:122
+msgid "Download as PDF"
+msgstr "Download als PDF"
+
+#: views/view_invoice.php:123
+msgid "Change Status to paid"
+msgstr "Status op betaald zetten"
+
+#: views/view_invoice.php:123
+msgid "Change status to paid"
+msgstr "Status op betaald zetten"
+
+#: views/view_options.php:4
+msgid "Options"
+msgstr "Opties"
+
+#: views/view_options.php:12
+msgid "Dashboard Widget"
+msgstr "Dashboard widget"
+
+#: views/view_options.php:13
+msgid "Enabled"
+msgstr "Aanzetten / tonen"
+
+#: views/view_options.php:14
+msgid "Check this to display wefact dashboard widget."
+msgstr "Vink deze optie aan om een overzicht van de laatste 5 facturen in een dashboard widget te tonen"
+
+#: views/view_options.php:17
+msgid "ip_address"
+msgstr "IP Adres"
+
+#: views/view_options.php:21
+msgid "Enter your website url for wefact."
+msgstr "Geef hier de URL aan naar de API van WeFact (op uw eigen server)"
+
+#: views/view_options.php:25
+msgid "Enter the given securitykey"
+msgstr "Vul hier uw security-code in"
+
+#: views/view_options.php:30
+msgid "Save"
+msgstr "Opslaan"
+
+#~ msgid "No items found."
+#~ msgstr "Geen items kunnen vinden"
+
+#~ msgid "Bulk Actions"
+#~ msgstr "Bulk aktie"
+
+#~ msgid "Apply"
+#~ msgstr "Bevestigen"
+
+#~ msgid "Show all dates"
+#~ msgstr "Toon alle datums"
+
+#~ msgid "List View"
+#~ msgstr "Toon lijst"
+
+#~ msgid "Excerpt View"
+#~ msgstr "Toon excerpt"
+
+#~ msgid "%s pending"
+#~ msgstr "%s in afwachting "
+
+#~ msgid "<h2>This is the main page.</h2>"
+#~ msgstr "<h2>Dit is de hoofd pagina.</h2>"
+
+#~ msgid "Initials"
+#~ msgstr "Initialen"
+
+#~ msgid "SurName"
+#~ msgstr "Achternaam"
+
+#~ msgid "<h2>The debtors list.</h2>"
+#~ msgstr "<h2>De lijst met debiteuren.</h2>"
+
+#~ msgid "The debtor"
+#~ msgstr "De debiteur"
+
+#~ msgid "Field Name"
+#~ msgstr "Veld naam"
+
+#~ msgid "Results"
+#~ msgstr "Resultaten"
+
+#~ msgid "Identifier"
+#~ msgstr "Facturatiegegevens"
+
+#~ msgid "Sex"
+#~ msgstr "Geslacht"
+
+#~ msgid "Surname"
+#~ msgstr "Achternaam"
+
+#~ msgid "Country long"
+#~ msgstr "Land"
+
+#~ msgid "Comment"
+#~ msgstr "Reactie"
+
+#~ msgid "Invoice initials"
+#~ msgstr "Factuur initialen"
+
+#~ msgid "Invoice surname"
+#~ msgstr "Factuur achternaam"
+
+#~ msgid "Invoice address"
+#~ msgstr "Factuur adres"
+
+#~ msgid "Invoice zip code"
+#~ msgstr "Factuur postcode"
+
+#~ msgid "Invoice country"
+#~ msgstr "Factuur land"
+
+#~ msgid "Invoice country long"
+#~ msgstr "Land"
+
+#~ msgid "Invoice Email address"
+#~ msgstr "Factuur E-mailadres"
+
+#~ msgid "Username"
+#~ msgstr "Gebruikersnaam"
+
+#~ msgid "Payment link"
+#~ msgstr "Betaal link"
+
+#~ msgid "This is the settings page."
+#~ msgstr "Dit is de instellingen pagina."
+
+#~ msgid "Edit"
+#~ msgstr "Wijzigen"
+
+#~ msgid "Delete"
+#~ msgstr "Verwijderen"

@@ -3,7 +3,7 @@ Contributors: Tussendoor internet & marketing
 Tags: tussendoor, wefact, administration, dashboard, widget, invoices, debtors
 Requires at least: 3.0
 Tested up to: 3.6
-Stable tag: 1.1
+Stable tag: 2.0
 
 This plugin makes it possible to show WeFact information (invoices, debtors, etc) @ your Wordpress admin 
 
@@ -71,11 +71,16 @@ For details look the first screenshot in the next tab
 = 1.1 =
 *	Performance updates
 
+= 2.0 =
+*	Complete rewrite of the plugin
+*	New Pages: pricequotes, debtors, invoices, products, settings
+*	New layout with tabs and pagination
+*	Detailed information of debtors, invoices and pricequotes
+*	Check if the API settings are correct
 
 == Translations ==
 
 * 	nl_NL 
-* 	en_EN
 
 == Links == 
 *	 Will follow

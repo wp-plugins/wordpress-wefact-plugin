@@ -1,0 +1,229 @@
+.wefact div.header {
+	margin: 20px 0 5px 0;
+}
+
+.wefact ul.nav {
+	border-bottom: 1px solid #CCC;
+	margin: 0;
+}
+
+.wefact ul.nav li {
+	display: inline-block;
+	border: 1px solid #CCC;
+	margin: 0 0 -1px 10px;
+	background-color: #EEE;
+}
+
+.wefact ul.nav li.active {
+	background-color: #FFF;
+	border-bottom: 1px solid #FFF;
+}
+
+.wefact ul.nav li:last-child {
+	margin-left: 5px;
+}
+
+.wefact ul.nav a {
+	display: block;
+	padding: 0 10px;
+	font-size: 1.3em;
+	line-height: 32px;
+	text-decoration: none;
+}
+
+.wefact div.section {
+	margin: 0 0 15px 0;
+	overflow: hidden;
+}
+
+.wefact .grid-1, .wefact .grid-2, .wefact .grid-3,
+.wefact .grid-4, .wefact .grid-5, .wefact .grid-6,
+.wefact .grid-7, .wefact .grid-8, .wefact .grid-9,
+.wefact .grid-10, .wefact .grid-11, .wefact .grid-12 {
+	display: inline;
+	float: left;
+	position: relative;
+	margin: 0px 1%;
+	min-height: 15px;
+}
+
+.wefact .grid-1 { width: 6.333%; }
+.wefact .grid-2 { width: 14.667%; }
+.wefact .grid-3 { width: 23.0%; }
+.wefact .grid-4 { width: 31.333%; }
+.wefact .grid-5 { width: 39.667%; }
+.wefact .grid-6 { width: 48.0%; }
+.wefact .grid-7 { width: 56.333%; }
+.wefact .grid-8 { width: 64.667%; }
+.wefact .grid-9 { width: 73.0%; }
+.wefact .grid-10 { width: 81.333%; }
+.wefact .grid-11 { width: 89.667%; }
+.wefact .grid-12 { width: 98.0%; }
+
+.wefact div.footer {
+	border-top: 1px solid #dfdfdf;
+	text-align: left;
+	padding: 10px 0;
+	margin: 50px 0 0 0;
+}
+
+.wefact .footer p {
+	margin: 10px 0 0 0;
+}
+
+.wefact pre {
+	border: 1px solid #FFE999;
+	background-color: #FFFBEB;
+	padding: 10px;
+}
+
+.wefact .notice,
+.wefact .success {
+	padding: 10px;
+	margin: 10px 0;
+	color: #404040;
+}
+
+.wefact .notice {
+	border: 1px solid #e6db55;
+	background-color: #fffbcc;
+}
+
+.wefact .success {
+	border: 1px solid #8CC08C;
+	background-color: #D4EBD9;
+}
+
+.wefact .wefact_form label {
+	display: inline-block;
+	width: 150px;
+}
+
+.wefact .table-horizontal {
+	width: 100%;
+	border-top: 1px solid #E6E6E6;
+	border-left: 1px solid #E6E6E6;
+	border-right: 1px solid #E6E6E6;
+	margin: 0 0 20px 0;
+}
+
+.wefact .table-horizontal .fixed {
+	table-layout: fixed;
+}
+
+.wefact .table-horizontal th, td {
+	padding: 8px 20px 8px 8px;
+	text-align: left;
+}
+
+.wefact .table-horizontal th {
+	font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.wefact .table-horizontal thead tr {
+	background-image: linear-gradient(to top,#E6E6E6,#f9f9f9);
+}
+
+.wefact .table-horizontal tbody tr:nth-child(even) {
+	background-color: #F5F5F5;
+}
+
+.wefact .table-horizontal tbody tr:nth-child(odd) {
+	background-color: #FCFCFC;
+}
+
+.wefact .table-horizontal tfoot tr {
+	background-image: linear-gradient(to bottom, #E6E6E6, #f9f9f9);
+}
+
+.wefact .table-horizontal thead th {
+	border-bottom: 1px solid #E6E6E6;
+}
+
+.wefact .table-horizontal tbody td {
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #E6E6E6;
+}	
+
+.wefact .table-horizontal tfoot th {
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #E6E6E6;
+}
+
+.wefact .table-horizontal a {
+	text-decoration: none;
+}
+
+.wefact .bold {
+	font-weight: bold;
+}
+
+.wefact .align-left {
+	text-align: left;
+}
+
+.wefact .align-center {
+	text-align: center;
+}
+
+.wefact .align-right {
+	text-align: right;
+}
+
+.wefact .total_excl,
+.wefact .total_incl {
+	padding: 15px 0;
+}
+
+.wefact .total_excl {
+	font-size: 28px;
+}
+
+.wefact .total_incl {
+	font-size: 22px;
+}
+.wefact .small {
+	font-size: 0.9em;
+}
+
+.wefact .details p {
+	margin: 5px 0;
+}
+
+.wefact .details table {
+	margin: 0;
+}
+
+.wefact .details table td,
+.wefact .details table th {
+	margin: 0;
+	padding: 5px 0;
+	text-align: left;
+}
+
+.wefact .details table th {
+	font-weight: bold;
+	padding-right: 20px;
+}
+
+.wefact .pagination {
+	display: inline-block;
+	border: 1px solid #CCC;
+	width: 32px;
+	text-align: center;
+	margin: 0 10px 0 0;
+	text-decoration: none;
+	background-color: #EEE;
+	line-height: 24px;
+}
+
+.wefact .pagination.active {
+	font-weight: bold;
+	color: #404040;
+}
+
+.grey {
+	color: #808080;
+}

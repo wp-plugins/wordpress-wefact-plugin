@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WP-WeFact\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-16 15:48+0100\n"
-"PO-Revision-Date: 2013-09-16 15:48+0100\n"
+"PO-Revision-Date: 2013-09-17 08:53+0100\n"
 "Last-Translator: Vincent Bremer <vincent@tussendoor.nl>\n"
 "Language-Team: Tussendoor <info@tussendoor.nl>\n"
 "MIME-Version: 1.0\n"
@@ -73,7 +73,7 @@ msgstr "Niet geaccepteerd"
 
 #: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:83
 msgid "The WeFact API settings must be entered in to use this plugin."
-msgstr "De WeFact API instellingen moeten ingevuld worden om deze plugin te gebruiken."
+msgstr "De WeFact API instellingen moeten ingevuld worden om deze plugin te kunnen gebruiken."
 
 #: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:87
 msgid "Can't connect to the WeFact API, please check if API settings are filled in correctly."

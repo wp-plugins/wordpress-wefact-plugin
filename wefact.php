@@ -15,7 +15,6 @@ class WeFact {
 
 	private $api;
 	private $limit = 10;
-	private $tabs = array();
 	private $urlparts = array();
 	private $rendered = false;
 	private $routes  = array(
@@ -39,15 +38,6 @@ class WeFact {
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
 		register_activation_hook( __FILE__, array($this, 'activate') );
-
-		$this->tabs = array(
-			'dashboard'     => __('Dashboard', 'wp_wefact'),
-			'debtors'       => __('Debtors', 'wp_wefact'),
-			'invoices'      => __('Invoices', 'wp_wefact'),
-			'pricequotes'   => __('Pricequotes', 'wp_wefact'),
-			'products'      => __('Products', 'wp_wefact'),
-			'settings'      => __('Settings', 'wp_wefact')
-		);
 
 		$this->urlparts = explode('/', (empty($_GET['route']) ? 'dashboard' : $_GET['route']));
 
@@ -292,7 +282,7 @@ class WeFact {
 		$this->render('settings', $viewData);
 	}
 
-	private function getTotal() {
+	public function getTotal() {
 		$listInvoices = $this->api->listInvoices();
 
 		$total = array('revenue' => 0, 'invoices' => 0);

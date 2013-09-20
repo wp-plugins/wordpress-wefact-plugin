@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-WeFact\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-16 15:48+0100\n"
-"PO-Revision-Date: 2013-09-17 08:53+0100\n"
+"POT-Creation-Date: 2013-09-20 09:03+0100\n"
+"PO-Revision-Date: 2013-09-20 09:04+0100\n"
 "Last-Translator: Vincent Bremer <vincent@tussendoor.nl>\n"
 "Language-Team: Tussendoor <info@tussendoor.nl>\n"
 "MIME-Version: 1.0\n"
@@ -15,111 +15,85 @@ msgstr ""
 "X-Poedit-Country: NETHERLANDS\n"
 "X-Poedit-SearchPath-0: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin\n"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:31
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:31
 msgid "Concept invoice"
 msgstr "Concept factuur"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:32
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:50
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:67
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:32
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:50
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:67
 msgid "Send"
 msgstr "Verstuurd"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:33
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:33
 msgid "Partly paid"
 msgstr "Deels betaald"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:34
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:34
 #: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:39
 #: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:39
 #: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:103
 msgid "Paid"
 msgstr "Betaald"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:35
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:35
 msgid "Credit invoice"
 msgstr "Credit factuur"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:36
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:36
 msgid "Expired"
 msgstr "Vervallen"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:48
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:65
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:48
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:65
 msgid "Concept pricequote"
 msgstr "Concept offerte"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:49
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:66
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:49
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:66
 msgid "Waiting queue"
 msgstr "Wachtrij"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:51
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:68
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:51
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:68
 #: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:39
 #: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:138
 msgid "Accepted"
 msgstr "Geaccepteerd"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:52
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:69
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:52
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:69
 msgid "Invoice made"
 msgstr "Factuur gemaakt"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:53
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:70
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:53
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:70
 msgid "Not accepted"
 msgstr "Niet geaccepteerd"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:83
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:83
 msgid "The WeFact API settings must be entered in to use this plugin."
 msgstr "De WeFact API instellingen moeten ingevuld worden om deze plugin te kunnen gebruiken."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:87
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:87
 msgid "Can't connect to the WeFact API, please check if API settings are filled in correctly."
 msgstr "Kan geen verbinding maken met de WeFact API, controleer of de API instellingen correct zijn ingevoerd."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:91
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:91
 msgid "The invoice has been marked as <strong>paid</strong>."
 msgstr "De factuur is gemarkeerd als <strong>betaald</strong>."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:95
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:95
 msgid "The pricequote has been marked as <strong>accepted</strong>."
 msgstr "De offerte is gemarkeerd als <strong>geaccepteerd</strong>."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/functions.php:99
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:99
 msgid "The pricequote has been marked as <strong>declined</strong>."
 msgstr "De offerte is gemarkeerd als <strong>geweigerd</strong>."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/wefact-admin.php:15
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/wefact.php:50
 msgid "Plugin requires that the Soap Client is installed on the server."
 msgstr "Deze plugin vereist dat de Soap Client is geinstalleerd op de server."
-
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/wefact.php:28
-msgid "Dashboard"
-msgstr "Dashboard"
-
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/wefact.php:29
-msgid "Debtors"
-msgstr "Debiteuren"
-
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/wefact.php:30
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:84
-msgid "Invoices"
-msgstr "Facturen"
-
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/wefact.php:31
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:119
-msgid "Pricequotes"
-msgstr "Offertes"
-
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/wefact.php:32
-msgid "Products"
-msgstr "Producten"
-
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/resources/wefact.php:33
-msgid "Settings"
-msgstr "Instellingen"
 
 #: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:3
 msgid "Open invoices"
@@ -250,15 +224,27 @@ msgid "Other"
 msgstr "Anders"
 
 #: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:3
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:29
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:34
 msgid "API settings WeFact"
 msgstr "API instellingen in WeFact"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:21
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:13
+msgid "WeFact version:"
+msgstr "WeFact versie:"
+
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:18
+msgid "WeFact API URL:"
+msgstr "WeFact API URL:"
+
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:22
+msgid "Security key:"
+msgstr "Beveligingcode:"
+
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:26
 msgid "Save"
 msgstr "Opslaan"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:34
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:39
 msgid "For more information, see:"
 msgstr "Voor meer informatie, zie:"
 
@@ -308,9 +294,19 @@ msgstr "Factureren op"
 msgid "No subscriptions found"
 msgstr "Er zijn geen abonnementen gevonden"
 
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:84
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:5
+msgid "Invoices"
+msgstr "Facturen"
+
 #: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:112
 msgid "No invoices found"
 msgstr "Er zijn geen facturen gevonden"
+
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:119
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:6
+msgid "Pricequotes"
+msgstr "Offertes"
 
 #: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:147
 msgid "No pricequotes found"
@@ -390,6 +386,22 @@ msgstr "Like ons op Facebook"
 #: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_bottom.php:9
 msgid "More plugins?"
 msgstr "Meer plugins?"
+
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:3
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:4
+msgid "Debtors"
+msgstr "Debiteuren"
+
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:7
+msgid "Products"
+msgstr "Producten"
+
+#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:8
+msgid "Settings"
+msgstr "Instellingen"
 
 #~ msgid ""
 #~ "Please check if the <a href=\"%s\">WeFact API settings</a> are correctly "

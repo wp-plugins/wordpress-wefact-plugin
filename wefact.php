@@ -3,13 +3,13 @@
 	Plugin Name: Wordpress WeFact plugin
 	Plugin URI: http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/
 	Description: WeFact Plugin. For the installation guide <a href="http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/">click here.</a> | Voor de installatie handleiding <a href="http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/">klik hier.</a>
-	Version: 2.1
+	Version: 2.2
 	Author: Tussendoor internet & marketing
 	Author URI: http://www.tussendoor.nl
 */
 
-require_once(dirname(__FILE__).'/functions.php');
-require_once(dirname(__FILE__).'/api.php');
+require_once(dirname(__FILE__) . '/functions.php');
+require_once(dirname(__FILE__) . '/api.php');
 
 class WeFact {
 
@@ -32,17 +32,19 @@ class WeFact {
 		'settings'                 => 'settings'
 	);
 
-	public function __construct()
-	{
-		add_action( 'init', array( $this, 'init' ) );
-		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
-		register_activation_hook( __FILE__, array($this, 'activate') );
+	public function __construct() {
+		add_action('init', array($this, 'init'));
+		add_action('admin_menu', array($this, 'admin_menu'));
+		add_action('admin_enqueue_scripts', array($this, 'register_plugin_scripts'));
+		register_activation_hook( __FILE__, array($this, 'activate'));
 
 		$this->urlparts = explode('/', (empty($_GET['route']) ? 'dashboard' : $_GET['route']));
 
-		$wefact_url	= get_option('wefact_url');
-		$wefact_key	= get_option('wefact_key');
+		
+		$wefact_key	 = get_option('wefact_key');
+		$wefact_type = get_option('wefact_type');
+
+		$wefact_url = ($wefact_type == 'standard' ? 'https://www.mijnwefact.nl/api/?wsdl&version=1.07' : get_option('wefact_url'));		
 
 		if ( ! class_exists('SoapClient') ) {
 			die(__('Plugin requires that the Soap Client is installed on the server.', 'wefact'));
@@ -61,13 +63,11 @@ class WeFact {
 		}
 	}
 
-	public function init()
-	{
+	public function init() {
 		load_plugin_textdomain('wp_wefact', false, dirname(plugin_basename(__FILE__)).'/languages' );
 	}
 
-	public function activate()
-	{
+	public function activate() {
 		if ($wefact_url = get_option('clientURL')) {
 			update_option('wefact_url', $wefact_url);
 			delete_option('clientURL');
@@ -79,15 +79,48 @@ class WeFact {
 		}
 	}
 
-	public function register_plugin_styles()
+	public function register_plugin_scripts()
 	{
 		wp_register_style( 'wefact_style', plugins_url( 'wordpress-wefact-plugin/css/style.css' ) );
 		wp_enqueue_style( 'wefact_style' );
+		wp_enqueue_script('jquery');
 	}
 
 	public function admin_menu()
 	{
 		add_menu_page('WeFact', 'WeFact', 'manage_options', 'wefact', array(&$this, 'route'), plugins_url('wordpress-wefact-plugin/images/favicon.ico'));
+	}
+
+	public function route()
+	{
+		foreach ($this->routes as $route => $action) {
+			$routeparts = explode('/', $route);
+			$match = 0;
+			$vars = array();
+				
+			if (count($routeparts) == count($this->urlparts)) {
+				for ($i = 0; $i < count($this->urlparts); $i++) {
+					if ($routeparts[$i] == $this->urlparts[$i]) {
+						$match += 1;
+					} 
+					elseif ($routeparts[$i] == '*') {
+						$match += 1;
+						$vars[] = $this->urlparts[$i];
+					}
+					if ($match == count($this->urlparts)) {
+						if (method_exists($this, $action)) {
+							if (empty($vars)) {
+								call_user_func(array($this, $action));
+							}
+							else {
+								call_user_func_array(array($this, $action), $vars);
+							}
+						}
+						break;
+					}
+				}
+			}
+		}
 	}
 
 	public function viewDashboard()
@@ -275,7 +308,10 @@ class WeFact {
 	public function settings()
 	{
 		if ( ! empty( $_POST ) ) {
-			update_option('wefact_url', $_POST['wefact_url']);
+			if ($_POST['wefact_type'] == 'hosting') {
+				update_option('wefact_url', $_POST['wefact_url']);
+			}
+			update_option('wefact_type', $_POST['wefact_type']);
 			update_option('wefact_key', $_POST['wefact_key']);
 		}
 
@@ -308,39 +344,7 @@ class WeFact {
 		}
 		return $total;
 	}
-
-	public function route()
-	{
-		foreach ($this->routes as $route => $action) {
-			$routeparts = explode('/', $route);
-			$match = 0;
-			$vars = array();
-				
-			if (count($routeparts) == count($this->urlparts)) {
-				for ($i = 0; $i < count($this->urlparts); $i++) {
-					if ($routeparts[$i] == $this->urlparts[$i]) {
-						$match += 1;
-					} 
-					elseif ($routeparts[$i] == '*') {
-						$match += 1;
-						$vars[] = $this->urlparts[$i];
-					}
-					if ($match == count($this->urlparts)) {
-						if (method_exists($this, $action)) {
-							if (empty($vars)) {
-								call_user_func(array($this, $action));
-							}
-							else {
-								call_user_func_array(array($this, $action), $vars);
-							}
-						}
-						break;
-					}
-				}
-			}
-		}
-	}
-
+	
 	private function showMsg()
 	{
 		if (isset($_GET['msg'])) {

@@ -136,7 +136,7 @@ class form {
 		foreach ($options as $k => $v) {
 			echo '<option value="'.$k.'" '.($k === $selected ? 'selected="selected"' : '').'>'.$v.'</option>';
 		}
-		echo '</select>';	
+		echo '</select>';
 	}
 	
 	public static function submit($value, $attr = array()) {

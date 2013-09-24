@@ -65,11 +65,13 @@ For details look the first screenshot in the next tab
 * 	Crediteuren inladen.
 * 	Toon verwante facturen bij debiteur / factuur.
 
-= 1.0 =
-*	Initial release
+= 2.2 =
+*	Added the option to use the plugin with [WeFact standard](https://www.wefact.nl/wefact-standard?ref=Tussendoor) (select in the plugin settings page)
+*	Some small code improvements
 
-= 1.1 =
-*	Performance updates
+= 2.1 =
+*	Merged the wefact.php and wefact-admin.php files
+*	Moved all hooks to the constructor
 
 = 2.0 =
 *	Complete rewrite of the plugin
@@ -78,13 +80,11 @@ For details look the first screenshot in the next tab
 *	Detailed information of debtors, invoices and pricequotes
 *	Check if the API settings are correct
 
-= 2.1 =
-*	Merged the wefact.php and wefact-admin.php files
-*	Moved all hooks to the constructor
+= 1.1 =
+*	Performance updates
 
-= 2.2 =
-*	Added the option to use the plugin with WeFact standard (select in the plugin settings page)
-*	Some small code improvements
+= 1.0 =
+*	Initial release
 
 == Translations ==
 

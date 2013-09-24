@@ -59,12 +59,6 @@ For details look the first screenshot in the next tab
 
 == Changelog ==
 
-= todo =
-*	API (WeFact) check / kijk of de API up-to-date is.
-*	Toon herinneringen / aanmaning wanneer API laadtijd verbeterd is.
-* 	Crediteuren inladen.
-* 	Toon verwante facturen bij debiteur / factuur.
-
 = 2.2 =
 *	Added the option to use the plugin with [WeFact standard](https://www.wefact.nl/wefact-standard?ref=Tussendoor) (select in the plugin settings page)
 *	Some small code improvements

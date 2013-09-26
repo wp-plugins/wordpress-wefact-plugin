@@ -111,7 +111,8 @@
 	table-layout: fixed;
 }
 
-.wefact .table-horizontal th, td {
+.wefact .table-horizontal th,
+.wefact .table-horizontal td {
 	padding: 8px 20px 8px 8px;
 	text-align: left;
 }

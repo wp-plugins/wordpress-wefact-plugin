@@ -1,6 +1,6 @@
 <div class="section">
 	<div class="grid-12">
-		<h2>Producten overzicht</h2>
+		<h2><?php _e('Products overview', 'wp_wefact') ?></h2>
 	</div>
 </div>
 
@@ -19,9 +19,9 @@
 			<tbody>
 				<?php $i = 0; ?>
 				<?php foreach ( (array) $products as $p): ?>
-					<tr <?= ($i&1 ? 'class="alternate"' : '') ?>>
-						<td><?= $p->ProductCode ?></td>
-						<td><?= $p->ProductName ?></td>
+					<tr <?php echo ($i&1 ? 'class="alternate"' : '') ?>>
+						<td><?php echo $p->ProductCode ?></td>
+						<td><?php echo $p->ProductName ?></td>
 						<td>
 							<?php switch ($p->ProductType) {
 								case 'domain':
@@ -32,8 +32,8 @@
 								break;
 							} ?>
 						</td>
-						<td><?= price($p->PriceExcl) ?></td>
-						<td><?= $p->Sold ?> x</td>
+						<td><?php echo WPWF::price($p->PriceExcl) ?></td>
+						<td><?php echo $p->Sold ?> x</td>
 					</tr>
 				<?php $i++; ?>
 				<?php endforeach; ?>

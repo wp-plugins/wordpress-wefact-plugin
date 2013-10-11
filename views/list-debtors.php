@@ -19,20 +19,20 @@
 			<tbody>
 				<?php $i = 0; ?>
 				<?php foreach ( (array) $debtors as $row): ?>
-					<tr <?= ($i&1 ? 'class="alternate"' : '') ?>>
+					<tr <?php echo ($i&1 ? 'class="alternate"' : '') ?>>
 						<td>
-							<a href="admin.php?page=wefact&amp;route=debtors/view/<?= $row->Identifier ?>">
-								<?= $row->DebtorCode ?>
+							<a href="admin.php?page=wefact&amp;route=debtors/view/<?php echo $row->Identifier ?>">
+								<?php echo $row->DebtorCode ?>
 							</a>
 						</td>
 						<td>
-							<a href="admin.php?page=wefact&amp;route=debtors/view/<?= $row->Identifier ?>">
-								<?= $row->CompanyName ?>
+							<a href="admin.php?page=wefact&amp;route=debtors/view/<?php echo $row->Identifier ?>">
+								<?php echo $row->CompanyName ?>
 							</a>
 						</td>
-						<td><a href="mailto:<?= $row->EmailAddress ?>"><?= $row->EmailAddress ?></a></td>
+						<td><a href="mailto:<?php echo $row->EmailAddress ?>"><?php echo $row->EmailAddress ?></a></td>
 						<td><?php echo $row->PhoneNumber ?></td>
-						<td><?= $row->City ?></td>
+						<td><?php echo $row->City ?></td>
 					</tr>
 				<?php $i++; ?>
 				<?php endforeach; ?>

@@ -66,7 +66,7 @@
 					<?php foreach ( (array) $subscriptions as $s): ?>
 						<tr <?= ($i&1 ? 'class="alternate"' : '') ?>>
 							<td><?php echo $s->Description ?></td>
-							<td><?php echo price($s->PriceExcl) ?></td>
+							<td><?php echo WPWF::price($s->PriceExcl) ?></td>
 							<td><?php echo $s->NextDate ?></td>
 						</tr>
 					<?php $i++; ?>
@@ -96,9 +96,9 @@
 					<?php foreach ( (array) $invoices as $row): ?>
 						<tr <?= ($i&1 ? 'class="alternate"' : '') ?>>
 							<td><a href="admin.php?page=wefact&amp;route=invoices/view/<?php echo $row->Identifier ?>"><?= $row->InvoiceCode ?></a></td>
-							<td><?php echo price($row->AmountIncl) ?></td>
+							<td><?php echo WPWF::price($row->AmountIncl) ?></td>
 							<td>
-								<?php echo invoice_statuses($row->Status) ?>
+								<?php echo WPWF::invoice_statuses($row->Status) ?>
 								<?php if ($row->Status == 2): ?>
 									(<a href="admin.php?page=wefact&amp;route=invoices/paid/<?= $row->Identifier ?>"><?php _e('Paid', 'wp_wefact') ?></a>)
 								<?php endif; ?>
@@ -131,9 +131,9 @@
 					<?php foreach ( (array) $pricequotes as $row): ?>
 						<tr <?= ($i&1 ? 'class="alternate"' : '') ?>>
 							<td><a href="admin.php?page=wefact&amp;route=pricequotes/view/<?php echo $row->Identifier ?>"><?= $row->PriceQuoteCode ?></a></td>
-							<td><?php echo price($row->AmountIncl) ?></td>
+							<td><?php echo WPWF::price($row->AmountIncl) ?></td>
 							<td>
-								<?php echo pricequote_statuses($row->Status) ?>
+								<?php echo WPWF::pricequote_statuses($row->Status) ?>
 								<?php if ($row->Status == 2): ?>
 									(<a href="admin.php?page=wefact&amp;route=pricequotes/accepted/<?= $row->Identifier ?>"><?php _e('Accepted', 'wp_wefact') ?></a> | <a href="admin.php?page=wefact&amp;route=pricequotes/declined/<?= $row->Identifier ?>"><?php _e('Declined', 'wp_wefact') ?></a>)
 								<?php endif; ?>

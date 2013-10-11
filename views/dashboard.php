@@ -4,7 +4,7 @@
 		<?php $this->showMsg() ?>
 	</div>
 	<div class="grid-4">
-		<h2>Statistieken</h2>
+		<h2><?php _e('Statistics', 'wp_wefact') ?></h2>
 	</div>
 </div>
 
@@ -33,7 +33,7 @@
 								<?= $row->CompanyName ?>
 							</a>
 						</td>
-						<td><?= price($row->AmountIncl) ?></td>
+						<td><?= WPWF::price($row->AmountIncl) ?></td>
 						<td>
 							<?php _e('Waiting for payment', 'wp_wefact') ?>
 							(<a href="admin.php?page=wefact&amp;route=invoices/paid/<?= $row->Identifier ?>"><?php _e('Paid', 'wp_wefact') ?></a>)
@@ -48,11 +48,11 @@
 		<h3><?php _e('Revenue this year', 'wp_wefact') ?></h3>
 		<table>
 			<tr>
-				<td class="total_excl"><?php echo price($total['revenue']) ?></td>
+				<td class="total_excl"><?php echo WPWF::price($total['revenue']) ?></td>
 				<td class="small"><?php _e('Excl. VAT', 'wp_wefact') ?></td>
 			</tr>
 			<tr>
-				<td class="total_incl grey"><?php echo price($total['revenue'] * 1.21) ?></td>
+				<td class="total_incl grey"><?php echo WPWF::price($total['revenue'] * 1.21) ?></td>
 				<td class="small grey"><?php _e('Incl. VAT', 'wp_wefact') ?></td>
 			</tr>
 		</table>

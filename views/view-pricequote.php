@@ -27,7 +27,7 @@
 			</tr>
 			<tr>
 				<th><?php _e('Date', 'wp_wefact') ?>:</th>
-				<td><?php echo dmy($pricequote->Date) ?></td>
+				<td><?php echo WPWF::dmy($pricequote->Date) ?></td>
 			</tr>
 		</table>
 	</div>
@@ -55,26 +55,26 @@
 						<td><?php echo $row->Number ?> x</td>
 						<td><?php echo $row->ProductCode ?></td>
 						<td><?php echo $row->Description ?></td>
-						<td><?php echo percentage($row->TaxPercentage) ?></td>
-						<td><?php echo price($row->PriceExcl) ?></td>
-						<td><?php echo price($row->Number * $row->PriceExcl) ?></td>
+						<td><?php echo WPWF::percentage($row->TaxPercentage) ?></td>
+						<td><?php echo WPWF::price($row->PriceExcl) ?></td>
+						<td><?php echo WPWF::price($row->Number * $row->PriceExcl) ?></td>
 					</tr>
 				<?php $i++; ?>
 				<?php endforeach; ?>
 				<tr class="bold">
 					<td colspan="5"></td>
 					<td><?php _e('Total excl. VAT', 'wp_wefact') ?></td>
-					<td><?php echo price($invoice->AmountExcl) ?></td>
+					<td><?php echo WPWF::price($invoice->AmountExcl) ?></td>
 				</tr>
 				<tr>
 					<td colspan="5"></td>
 					<td><?php _e('Total', 'wp_wefact') ?> <?php _e('VAT', 'wp_wefact') ?></td>
-					<td><?php echo price($invoice->AmountIncl - $invoice->AmountExcl) ?></td>
+					<td><?php echo WPWF::price($invoice->AmountIncl - $invoice->AmountExcl) ?></td>
 				</tr>
 				<tr>
 					<td colspan="5"></td>
 					<td><?php _e('Total excl. VAT', 'wp_wefact') ?></td>
-					<td><?php echo price($invoice->AmountIncl) ?></td>
+					<td><?php echo WPWF::price($invoice->AmountIncl) ?></td>
 				</tr>
 			</tbody>
 		</table>

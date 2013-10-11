@@ -3,13 +3,20 @@
 	Plugin Name: Wordpress WeFact plugin
 	Plugin URI: http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/
 	Description: WeFact Plugin. For the installation guide <a href="http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/">click here.</a> | Voor de installatie handleiding <a href="http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/">klik hier.</a>
-	Version: 2.2
+	Version: 2.2.1
 	Author: Tussendoor internet & marketing
 	Author URI: http://www.tussendoor.nl
 */
 
+// Start an output buffer to allow the usage of wp_redirect
+ob_start();
+
+if ( ! defined('WPWF_PLUGIN_DIR')) define('WPWF_PLUGIN_DIR', dirname(__FILE__));
+if ( ! defined('WPWF_PLUGIN_URL')) define('WPWF_PLUGIN_URL', plugins_url('wordpress-wefact-plugin'));
+
 require_once(dirname(__FILE__) . '/functions.php');
-require_once(dirname(__FILE__) . '/api.php');
+
+if ( ! class_exists('WeFactAPI') ) require_once(dirname(__FILE__) . '/api.php');
 
 class WeFact {
 
@@ -37,10 +44,11 @@ class WeFact {
 		add_action('admin_menu', array($this, 'admin_menu'));
 		add_action('admin_enqueue_scripts', array($this, 'register_plugin_scripts'));
 		register_activation_hook( __FILE__, array($this, 'activate'));
+	}
 
+	public function init() {
 		$this->urlparts = explode('/', (empty($_GET['route']) ? 'dashboard' : $_GET['route']));
 
-		
 		$wefact_key	 = get_option('wefact_key');
 		$wefact_type = get_option('wefact_type');
 
@@ -50,49 +58,52 @@ class WeFact {
 			die(__('Plugin requires that the Soap Client is installed on the server.', 'wefact'));
 		}
 
-		if ($_GET['route'] != 'settings') {
+		if ( $_GET['page'] == 'wefact' && $_GET['route'] != 'settings' ) {
 			if ( (empty($wefact_url) || empty($wefact_key)) ) {
-				$this->redirect('&route=settings&msg=1');
+				wp_redirect( admin_url( 'admin.php?page=wefact&route=settings&msg=1' ) );
 			}
 			elseif ( ! empty($wefact_url) || ! empty($wefact_key)) {
 				$this->api = new WeFactAPI($wefact_url, $wefact_key);
 				if ( ! $this->api->client) {
-					$this->redirect('&route=settings&msg=2');
+					wp_redirect( admin_url( 'admin.php?page=wefact&route=settings&msg=2' ) );
+				}
+				else {
+					// Get the pricequotes (to check if the API settings are correct)
+					$check = $this->api->listPriceQuotes( array( 'Status' => '0' ) );
+
+					// No errors occured, initialize the plugin
+					if ( $check->Status == 'error' ) {
+						wp_redirect( admin_url( 'admin.php?page=wefact&route=settings&msg=2' ) );
+					}
 				}
 			}
 		}
-	}
-
-	public function init() {
 		load_plugin_textdomain('wp_wefact', false, dirname(plugin_basename(__FILE__)).'/languages' );
 	}
 
 	public function activate() {
-		if ($wefact_url = get_option('clientURL')) {
+		if ( $wefact_url = get_option('clientURL') ) {
 			update_option('wefact_url', $wefact_url);
 			delete_option('clientURL');
 		}
 
-		if ($wefact_key = get_option('clientSecuritykey')) {
+		if ( $wefact_key = get_option('clientSecuritykey') ) {
 			update_option('wefact_key', $wefact_key);
 			delete_option('clientSecuritykey');
 		}
 	}
 
-	public function register_plugin_scripts()
-	{
+	public function register_plugin_scripts() {
 		wp_register_style( 'wefact_style', plugins_url( 'wordpress-wefact-plugin/css/style.css' ) );
 		wp_enqueue_style( 'wefact_style' );
-		wp_enqueue_script('jquery');
+		wp_enqueue_script( 'jquery' );
 	}
 
-	public function admin_menu()
-	{
+	public function admin_menu() {
 		add_menu_page('WeFact', 'WeFact', 'manage_options', 'wefact', array(&$this, 'route'), plugins_url('wordpress-wefact-plugin/images/favicon.ico'));
 	}
 
-	public function route()
-	{
+	public function route() {
 		foreach ($this->routes as $route => $action) {
 			$routeparts = explode('/', $route);
 			$match = 0;
@@ -123,8 +134,7 @@ class WeFact {
 		}
 	}
 
-	public function viewDashboard()
-	{
+	public function viewDashboard() {
 		$listInvoices = $this->api->listInvoices(array(
 			"Sort" 		 => "InvoiceCode",
 			"Order" 	 => "ASC"
@@ -146,8 +156,7 @@ class WeFact {
 		$this->render('dashboard', $viewData);
 	}
 
-	public function listDebtors()
-	{
+	public function listDebtors() {
 		$data = array();
 		$listDebtors = $this->api->listDebtors(array(
 			"Sort" 		 => "CompanyName",
@@ -177,8 +186,7 @@ class WeFact {
 		$this->render('list-debtors', $viewData);
 	}
 
-	public function viewDebtor($id)
-	{
+	public function viewDebtor($id) {
 		$getDebtor = $this->api->getDebtor($id);
 
 		$listSubscriptions = $this->api->listSubscriptions(array(
@@ -203,8 +211,7 @@ class WeFact {
 		$this->render('view-debtor', $viewData);
 	}
 
-	public function listInvoices()
-	{
+	public function listInvoices() {
 		$listInvoices = $this->api->listInvoices(array(
 			"Sort" 		 => "InvoiceCode",
 			"Order" 	 => "ASC"
@@ -225,20 +232,17 @@ class WeFact {
 		$this->render('list-invoices', $viewData);
 	}
 
-	public function viewInvoice($id)
-	{
+	public function viewInvoice($id) {
 		$getInvoice = $this->api->getInvoice($id);
 		$this->render('view-invoice', array('invoice' => $getInvoice->Result->Invoice));
 	}
 
-	public function setInvoicePaid($id)
-	{
+	public function setInvoicePaid($id) {
 		$this->api->changeInvoiceStatus($id, 'true');
 		$this->redirect('&route=invoices&msg=3');
 	}
 
-	public function listPricequotes()
-	{
+	public function listPricequotes() {
 		$listPriceQuotes = $this->api->listPriceQuotes();
 
 		if ( ! $listPriceQuotes->Error) {
@@ -257,8 +261,7 @@ class WeFact {
 		$this->render('list-pricequotes', $viewData);
 	}
 
-	public function viewPricequote($id)
-	{
+	public function viewPricequote($id) {
 		$getPriceQuote = $this->api->getPriceQuote($id);
 		$pricequote = $getPriceQuote->Result->PriceQuote;
 
@@ -273,20 +276,17 @@ class WeFact {
 		$this->render('view-pricequote', $viewData);
 	}
 
-	public function setPricequoteAccepted($id)
-	{
+	public function setPricequoteAccepted($id) {
 		$this->api->changePriceQuoteStatus($id, 'true');
 		$this->redirect('&route=pricequotes&msg=4');
 	}
 
-	public function setPricequoteDeclined($id)
-	{
+	public function setPricequoteDeclined($id) {
 		$this->api->changePriceQuoteStatus($id, 'false');
 		$this->redirect('&route=pricequotes&msg=5');
 	}
 
-	public function listProducts()
-	{
+	public function listProducts() {
 		$listProducts = $this->api->listProducts();
 
 		if ( ! $listProducts->Error) {
@@ -305,8 +305,7 @@ class WeFact {
 		$this->render('list-products', $viewData);
 	}
 
-	public function settings()
-	{
+	public function settings() {
 		if ( ! empty( $_POST ) ) {
 			if ($_POST['wefact_type'] == 'hosting') {
 				update_option('wefact_url', $_POST['wefact_url']);
@@ -345,16 +344,14 @@ class WeFact {
 		return $total;
 	}
 	
-	private function showMsg()
-	{
+	private function showMsg() {
 		if (isset($_GET['msg'])) {
-			$tmp = wefact_messages($_GET['msg']);
+			$tmp = WPWF::messages($_GET['msg']);
 			echo '<div class="'.$tmp['class'].'">'.$tmp['message'].'</div>';
 		}
 	}
 
-	private function render($page, $viewData = array())
-	{
+	private function render( $page, $viewData = array() ) {
 		if ( ! $this->rendered) {
 			if ( ! empty($viewData)) {
 				extract($viewData, EXTR_SKIP);				
@@ -366,7 +363,7 @@ class WeFact {
 		}
 	}
 
-	private function redirect($to) {
+	private function redirect( $to ) {
 		if ( ! $this->rendered) {
 			$redirectURL = get_site_url().'/wp-admin/admin.php?page=wefact'.$to;
 			echo '<meta http-equiv="refresh" content="0; ' . $redirectURL . '">';

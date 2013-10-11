@@ -31,10 +31,10 @@
 								<?= $row->CompanyName ?>
 							</a>
 						</td>
-						<td><?= price($row->AmountIncl) ?></td>
-						<td><?= dmy($row->Date) ?></td>
+						<td><?= WPWF::price($row->AmountIncl) ?></td>
+						<td><?= WPWF::dmy($row->Date) ?></td>
 						<td>
-							<?php echo invoice_statuses($row->Status) ?>
+							<?php echo WPWF::invoice_statuses($row->Status) ?>
 							<?php if ($row->Status == 2): ?>
 								(<a href="admin.php?page=wefact&amp;route=invoices/paid/<?= $row->Identifier ?>"><?php _e('Paid', 'wp_wefact') ?></a>)
 							<?php endif; ?>

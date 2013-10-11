@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-WeFact\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-20 09:03+0100\n"
-"PO-Revision-Date: 2013-09-20 09:04+0100\n"
+"POT-Creation-Date: 2013-10-11 08:50+0100\n"
+"PO-Revision-Date: 2013-10-11 08:50+0100\n"
 "Last-Translator: Vincent Bremer <vincent@tussendoor.nl>\n"
 "Language-Team: Tussendoor <info@tussendoor.nl>\n"
 "MIME-Version: 1.0\n"
@@ -13,393 +13,404 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-Language: Dutch\n"
 "X-Poedit-Country: NETHERLANDS\n"
-"X-Poedit-SearchPath-0: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin\n"
+"X-Poedit-SearchPath-0: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin\n"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:31
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:31
 msgid "Concept invoice"
 msgstr "Concept factuur"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:32
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:50
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:67
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:32
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:50
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:67
 msgid "Send"
 msgstr "Verstuurd"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:33
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:33
 msgid "Partly paid"
 msgstr "Deels betaald"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:34
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:39
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:39
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:103
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:34
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:39
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:39
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:103
 msgid "Paid"
 msgstr "Betaald"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:35
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:35
 msgid "Credit invoice"
 msgstr "Credit factuur"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:36
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:36
 msgid "Expired"
 msgstr "Vervallen"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:48
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:65
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:48
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:65
 msgid "Concept pricequote"
 msgstr "Concept offerte"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:49
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:66
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:49
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:66
 msgid "Waiting queue"
 msgstr "Wachtrij"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:51
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:68
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:39
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:138
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:51
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:68
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:39
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:138
 msgid "Accepted"
 msgstr "Geaccepteerd"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:52
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:69
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:52
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:69
 msgid "Invoice made"
 msgstr "Factuur gemaakt"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:53
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:70
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:53
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:70
 msgid "Not accepted"
 msgstr "Niet geaccepteerd"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:83
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:83
 msgid "The WeFact API settings must be entered in to use this plugin."
 msgstr "De WeFact API instellingen moeten ingevuld worden om deze plugin te kunnen gebruiken."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:87
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:87
 msgid "Can't connect to the WeFact API, please check if API settings are filled in correctly."
 msgstr "Kan geen verbinding maken met de WeFact API, controleer of de API instellingen correct zijn ingevoerd."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:91
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:91
 msgid "The invoice has been marked as <strong>paid</strong>."
 msgstr "De factuur is gemarkeerd als <strong>betaald</strong>."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:95
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:95
 msgid "The pricequote has been marked as <strong>accepted</strong>."
 msgstr "De offerte is gemarkeerd als <strong>geaccepteerd</strong>."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:99
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/functions.php:99
 msgid "The pricequote has been marked as <strong>declined</strong>."
 msgstr "De offerte is gemarkeerd als <strong>geweigerd</strong>."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/wefact.php:50
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/wefact.php:50
 msgid "Plugin requires that the Soap Client is installed on the server."
 msgstr "Deze plugin vereist dat de Soap Client is geinstalleerd op de server."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:3
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:3
 msgid "Open invoices"
 msgstr "Openstaande facturen"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:16
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:13
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:25
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:7
+msgid "Statistics"
+msgstr "Statistieken"
+
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:16
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:13
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:25
 msgid "Invoicenr."
 msgstr "Factuurnr."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:17
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:14
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:14
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:3
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:17
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:14
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:14
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:3
 msgid "Debtor"
 msgstr "Debiteur"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:18
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:15
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:15
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:90
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:125
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:18
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:15
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:15
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:90
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:125
 msgid "Price incl. VAT"
 msgstr "Prijs incl. BTW"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:19
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:17
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:17
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:91
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:126
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:19
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:17
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:17
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:91
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:126
 msgid "Status"
 msgstr "Status"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:38
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:38
 msgid "Waiting for payment"
 msgstr "Wacht op betaling"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:48
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:48
 msgid "Revenue this year"
 msgstr "Omzet dit jaar"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:52
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:52
 msgid "Excl. VAT"
 msgstr "Excl. BTW"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:56
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/dashboard.php:56
 msgid "Incl. VAT"
 msgstr "Incl. BTW"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-debtors.php:3
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-debtors.php:3
 msgid "Debtor overview"
 msgstr "Debiteuren overzicht"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-debtors.php:12
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:89
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:21
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:21
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-debtors.php:12
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:89
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:21
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:21
 msgid "Debtornr."
 msgstr "Debiteurnr."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-debtors.php:13
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:13
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-debtors.php:13
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:13
 msgid "Name"
 msgstr "Naam"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-debtors.php:14
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-debtors.php:14
 msgid "E-mail address"
 msgstr "E-mail adres"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-debtors.php:15
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-debtors.php:15
 msgid "Phonenumber"
 msgstr "Telefoonnummer"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-debtors.php:16
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-debtors.php:16
 msgid "Place"
 msgstr "Plaats"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:3
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:3
 msgid "Invoices overview"
 msgstr "Facturen overzicht"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:16
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-invoices.php:16
 msgid "Invoice date"
 msgstr "Factuur datum"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:3
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:3
 msgid "Pricequotes overview"
 msgstr "Offerteoverzicht"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:13
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:124
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:13
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:124
 msgid "Pricequotenr."
 msgstr "Offertenr."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:16
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:16
 msgid "Pricequote date"
 msgstr "Offertedatum"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:39
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:138
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-pricequotes.php:39
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:138
 msgid "Declined"
 msgstr "Geweigerd"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:12
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:3
+msgid "Products overview"
+msgstr "Producten overzicht"
+
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:12
 msgid "Productnr."
 msgstr "Productnr."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:14
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:14
 msgid "Product type"
 msgstr "Product type"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:15
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:60
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:15
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:60
 msgid "Price excl. VAT"
 msgstr "Prijs excl. BTW"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:16
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:16
 msgid "Amount sold"
 msgstr "Aantal verkocht"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:28
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:28
 msgid "Domain"
 msgstr "Domein"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:31
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/list-products.php:31
 msgid "Other"
 msgstr "Anders"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:3
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:34
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:3
 msgid "API settings WeFact"
 msgstr "API instellingen in WeFact"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:13
-msgid "WeFact version:"
-msgstr "WeFact versie:"
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:9
+msgid "Server IP address"
+msgstr "Server IP adres"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:18
-msgid "WeFact API URL:"
-msgstr "WeFact API URL:"
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:13
+msgid "WeFact version"
+msgstr "WeFact versie"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:22
-msgid "Security key:"
-msgstr "Beveligingcode:"
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:18
+msgid "WeFact API URL"
+msgstr "WeFact API URL"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:26
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:22
+msgid "Security key"
+msgstr "Beveligingcode"
+
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:26
 msgid "Save"
 msgstr "Opslaan"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:39
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/settings.php:36
 msgid "For more information, see:"
 msgstr "Voor meer informatie, zie:"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:10
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:10
 msgid "Debtor information"
 msgstr "Debiteur informatie"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:14
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:14
 msgid "Company name"
 msgstr "Bedrijfsnaam"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:18
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:18
 msgid "Company number"
 msgstr "KvK nummer"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:22
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:22
 msgid "VAT-number"
 msgstr "BTW nummer"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:26
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:26
 msgid "Legalform"
 msgstr "Rechtsvorm"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:30
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:30
 msgid "Contact person"
 msgstr "Contactpersoon"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:37
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:37
 msgid "Address"
 msgstr "Adres"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:54
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:54
 msgid "Subscriptions"
 msgstr "Abonnementen"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:59
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:44
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:44
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:59
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:44
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:44
 msgid "Description"
 msgstr "Omschrijving"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:61
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:61
 msgid "Invoicing on"
 msgstr "Factureren op"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:77
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:77
 msgid "No subscriptions found"
 msgstr "Er zijn geen abonnementen gevonden"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:84
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:5
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:84
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:5
 msgid "Invoices"
 msgstr "Facturen"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:112
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:112
 msgid "No invoices found"
 msgstr "Er zijn geen facturen gevonden"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:119
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:6
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:119
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:6
 msgid "Pricequotes"
 msgstr "Offertes"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:147
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-debtor.php:147
 msgid "No pricequotes found"
 msgstr "Er zijn geen offertes gevonden"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:3
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:3
 msgid "Invoice"
 msgstr "Factuur"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:14
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:14
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:14
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:14
 msgid "attn."
 msgstr "t.a.v."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:29
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:41
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:29
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:41
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:29
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:41
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:29
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:41
 msgid "Date"
 msgstr "Datum"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:42
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:42
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:42
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:42
 msgid "Quantity"
 msgstr "Aantal"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:43
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:43
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:43
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:43
 msgid "Product"
 msgstr "Product"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:45
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:71
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:45
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:71
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:45
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:71
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:45
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:71
 msgid "VAT"
 msgstr "BTW"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:46
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:46
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:46
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:46
 msgid "Price"
 msgstr "Prijs"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:47
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:47
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:47
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:47
 msgid "Total incl. VAT"
 msgstr "Totaal incl. BTW"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:66
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:76
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:66
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:76
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:66
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:76
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:66
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:76
 msgid "Total excl. VAT"
 msgstr "Totaal excl. BTW"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:71
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:71
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-invoice.php:71
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:71
 msgid "Total"
 msgstr "Totaal"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:3
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:3
 msgid "Pricequote"
 msgstr "Offerte"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:25
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/view-pricequote.php:25
 msgid "pricequotenr."
 msgstr "offertenr."
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_bottom.php:4
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_bottom.php:4
 msgid "Questions, support or assistance?"
 msgstr "Vragen, support of ondersteuning?"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_bottom.php:6
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_bottom.php:6
 msgid "Like us on Facebook"
 msgstr "Like ons op Facebook"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_bottom.php:9
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_bottom.php:9
 msgid "More plugins?"
 msgstr "Meer plugins?"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:3
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:3
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:4
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:4
 msgid "Debtors"
 msgstr "Debiteuren"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:7
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:7
 msgid "Products"
 msgstr "Producten"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:8
+#: /Users/tussendoor7/htdocs/wp-vincent/wp-content/plugins/wordpress-wefact-plugin/views/include/page_top.php:8
 msgid "Settings"
 msgstr "Instellingen"
 

@@ -23,10 +23,6 @@ This plugin allows you to get easily information about your invoices and debtors
 
 The plugin also gives you the opportunity to show the latest invoice data via the dashboard widgets.
 
-
-Tags: [tussendoor](http://wordpress.org/plugins/tags/tussendoor) [wefact](http://wordpress.org/plugins/tags/wefact) [administration](http://wordpress.org/plugins/tags/administration) [dashboard](http://wordpress.org/plugins/tags/dashboard) [widget](http://wordpress.org/plugins/tags/widget) [invoices](http://wordpress.org/plugins/tags/invoices) [debtors](http://wordpress.org/plugins/tags/debtors)
-
-
 *	**Opties / options **
 Functies / Functions:
 Overzicht facturen / list invoices
@@ -37,6 +33,8 @@ Debiteur gegevens / debtor details
 Other pages in plugin
 Over + informatie / About + information
 Instellingen / settings 
+
+Tags: [tussendoor](http://wordpress.org/plugins/tags/tussendoor) [wefact](http://wordpress.org/plugins/tags/wefact) [administration](http://wordpress.org/plugins/tags/administration) [dashboard](http://wordpress.org/plugins/tags/dashboard) [widget](http://wordpress.org/plugins/tags/widget) [invoices](http://wordpress.org/plugins/tags/invoices) [debtors](http://wordpress.org/plugins/tags/debtors)
 
 == Installation ==
 

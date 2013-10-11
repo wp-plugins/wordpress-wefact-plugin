@@ -91,6 +91,9 @@ class WeFact {
 			update_option('wefact_key', $wefact_key);
 			delete_option('clientSecuritykey');
 		}
+		if ( ! get_option('wefact_type') ) {
+			update_option('wefact_type', 'standard');
+		}
 	}
 
 	public function register_plugin_scripts() {

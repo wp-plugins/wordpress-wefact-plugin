@@ -10,10 +10,12 @@ $tabs = array(
 ?>
 <div class="wrap wefact">
 	<div class="header">
-		<ul class="nav">
+		<ul class="tabs">
 			<?php foreach ($tabs as $route => $label): ?>
 				<?php $class = ($route == $this->urlparts[0] ? 'active' : ''); ?>
-				<li class="<?= $class ?>"><a href="admin.php?page=wefact&amp;route=<?= $route ?>"><?= $label ?></a></li>
+				<li class="<?= $class ?>">
+					<a href="admin.php?page=wefact&amp;route=<?= $route ?>"><?= $label ?></a>
+				</li>
 			<?php endforeach; ?>
 		</ul>
 	</div>

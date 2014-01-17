@@ -2,33 +2,36 @@
 	margin: 20px 0 5px 0;
 }
 
-.wefact ul.nav {
-	border-bottom: 1px solid #CCC;
+.wefact .tabs {
+	border-bottom: 1px solid #ccc;
 	margin: 0;
+	padding: 0;
 }
 
-.wefact ul.nav li {
+.wefact .tabs li {
 	display: inline-block;
-	border: 1px solid #CCC;
-	margin: 0 0 -1px 10px;
-	background-color: #EEE;
+	margin: 0 0 0 10px;
+	padding: 0;
 }
 
-.wefact ul.nav li.active {
-	background-color: #FFF;
-	border-bottom: 1px solid #FFF;
-}
-
-.wefact ul.nav li:last-child {
-	margin-left: 5px;
-}
-
-.wefact ul.nav a {
+.wefact .tabs a {
 	display: block;
-	padding: 0 10px;
-	font-size: 1.3em;
-	line-height: 32px;
 	text-decoration: none;
+	color: #808080;
+	padding: 10px;
+	font-size: 1.2em;
+}
+
+.wefact .tabs a:hover {
+	color: inherit;
+}
+
+.wefact .tabs .active a {
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	color: #404040;
+	font-weight: bold;
 }
 
 .wefact div.section {

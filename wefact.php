@@ -1,11 +1,12 @@
 <?php
 /*
-	Plugin Name: Wordpress WeFact plugin
-	Plugin URI: http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/
-	Description: WeFact Plugin. For the installation guide <a href="http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/">click here.</a> | Voor de installatie handleiding <a href="http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/">klik hier.</a>
-	Version: 2.3
-	Author: Tussendoor internet & marketing
-	Author URI: http://www.tussendoor.nl
+Plugin Name: Wordpress WeFact plugin
+Plugin URI: http://wordpress.org/plugins/wordpress-wefact-plugin/
+Description: WeFact Plugin. For the installation guide <a href="http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/">click here.</a> | Voor de installatie handleiding <a href="http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/">klik hier.</a>
+Version: 2.3.1
+Author: Tussendoor internet & marketing
+Author URI: http://www.tussendoor.nl
+Tested up to: 3.9
 */
 
 // Start an output buffer to allow the usage of wp_redirect

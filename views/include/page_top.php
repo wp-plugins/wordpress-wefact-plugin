@@ -9,14 +9,10 @@ $tabs = array(
 );
 ?>
 <div class="wrap wefact">
-	<div class="header">
-		<ul class="tabs">
-			<?php foreach ($tabs as $route => $label): ?>
-				<?php $class = ($route == $this->urlparts[0] ? 'active' : ''); ?>
-				<li class="<?= $class ?>">
-					<a href="admin.php?page=wefact&amp;route=<?= $route ?>"><?= $label ?></a>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-	</div>
+	<h2 class="nav-tab-wrapper">
+		<?php foreach ($tabs as $route => $label): ?>
+			<?php $class = ($route == $this->urlparts[0] ? 'nav-tab-active' : ''); ?>
+				<a class="nav-tab <?php echo $class; ?>" href="admin.php?page=wefact&amp;route=<?php echo $route; ?>"><?php echo $label; ?></a>
+		<?php endforeach; ?>
+	</h2>
 	<!-- Content -->

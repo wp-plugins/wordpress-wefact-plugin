@@ -1,5 +1,5 @@
 === Wordpress WeFact plugin ===
-Contributors: Tussendoor internet & marketing 
+Contributors: Tussendoor
 Tags: tussendoor, wefact, administration, dashboard, widget, invoices, debtors
 Requires at least: 3.0
 Tested up to: 3.9

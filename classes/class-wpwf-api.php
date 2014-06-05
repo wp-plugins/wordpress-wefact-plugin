@@ -8,10 +8,13 @@ header("Content-type: text/html; charset=utf-8");
  * @version 1.0
  * @access public
  */
-class WeFactAPI
-{
+class WPWF_API {
+
 	public $client;
-	private $securitykey;
+	public $connection;
+
+	private $old_api;
+	private $wpwf_api_key;
 	private $error;
 
 	/**
@@ -19,29 +22,41 @@ class WeFactAPI
 	 * 
 	 * @return
 	 */
-	function __construct($wefact_url, $wefact_key) {
+	function __construct( $wpwf_api_url, $wpwf_api_key, $wpwf_api_type, $wpwf_api_version ) {
+		$this->wpwf_api_key 	= $wpwf_api_key;
+		if( $wpwf_api_type == 'hosting' && $wpwf_api_version == '2.00' ):
+			$this->old_api = false; $this->connection = true;
+			require_once( dirname(__FILE__) . '/class-api-200.php' );
+			WPWF_200::SetData($wpwf_api_url, $wpwf_api_key);
+		else:
+			$this->old_api = true;
+			require_once( dirname(__FILE__) . '/class-api-107.php' );
+			if( WPWF_107::construct($wpwf_api_url, $wpwf_api_key) ): $this->connection = true; else: $this->connection = false; endif;
+		endif;
 
-		try {
-			$this->securitykey 	= $wefact_key;
-			$this->client		= @new SoapClient($wefact_url);
-		} 
-		catch(Exception $e) {
-			$this->client		= null;
-			$this->error 		= 'Exception: ' . $e->getMessage();
-			return false;
-		}
+		$this->check_connection();
 	}
 	
-	/**
-	 * WeFactAPI::getDebtor()
-	 * 
-	 * Retrieve personal data from debtor.
-	 * 
-	 * @param string $security_code Security code for access to the API
-	 * @param mixed $debtor_id Identifier of the debtor, can be obtained by using the listDebtors() function
-	 */
-	function getDebtor($debtor_id){
-		return $this->client->getDebtor($this->securitykey, $debtor_id);
+	private function check_connection() {
+		if( $this->connection && (isset($_POST['wpwf_api_key']) || isset($_POST['wc_wefact_key']))  ):
+			$result = self::listInvoices();
+			if( isset($_POST['wpwf_api_key']) ): $type = 'wpwf'; elseif( $_POST['wc_wefact_key'] ): $type = 'wcwf'; endif;
+
+			if( $result['status'] == 'success' ):
+				$this->connection = true; update_option($type.'_active', '1');
+			else:
+				$this->connection = false; update_option($type.'_active', '0');
+			endif;
+		endif;
+	}
+
+	public function getDebtor($debtor_id) {
+		if( $this->old_api ):
+			$result = WPWF_107::getDebtor($debtor_id);
+		else:
+			$result = WPWF_200::Request('debtor', 'show', array('Identifier' => $debtor_id));
+		endif;
+		return $this->Results( $result, 'debtor');
 	}
 	
 	/**
@@ -54,8 +69,13 @@ class WeFactAPI
 	 * @param string $security_code Security code for access to the API
 	 * @param mixed $filter Array with optional keys Sort (e.g. DebtorCode), Order (e.g. ASC) and Search (e.g. WeFact).
 	 */
-	function listDebtors($filter = array()){
-		return $this->client->listDebtors($this->securitykey, $filter);	
+	function listDebtors($filter = array()) {
+		if( $this->old_api ):
+			$result = WPWF_107::listDebtors($filter);
+		else:
+			$result = WPWF_200::Request('debtor', 'list', array_change_key_case($filter));
+		endif;
+		return $this->Results( $result, 'debtors');
 	}
 	
 	/**
@@ -66,8 +86,13 @@ class WeFactAPI
 	 * @param string $security_code Security code for access to the API
 	 * @param mixed $newDebtor Array with optional keys as mentioned in documentation
 	 */
-	function addDebtor($newDebtor = array()){
-		return $this->client->addDebtor($this->securitykey, $newDebtor);
+	function addDebtor($data = array()) {
+		if( $this->old_api ):
+			$result = WPWF_107::addDebtor($data);
+		else:
+			$result = WPWF_200::Request('debtor', 'add', array_change_key_case($data));
+		endif;
+		return $this->Results( $result, 'debtor' );
 	}
 	
 	/**
@@ -105,8 +130,16 @@ class WeFactAPI
 	 * @param mixed $debtor_code
 	 * @return
 	 */
-	function getDebtorID($debtor_code){
-		return $this->client->getDebtorID($this->securitykey, $debtor_code);
+	function getDebtorID($debtor_code) {
+		if( $this->old_api ):
+			$result = WPWF_107::getDebtorID($debtor_code);
+			$result['Result']['Identifier'] = (isset($result['Result']['Value']) ? $result['Result']['Value'] : false);
+		else:
+			$result = WPWF_200::Request('debtor', 'show', array( 'DebtorCode' => $debtor_code ) );
+			$result['identifier'] = (isset($result['debtor']['Identifier']) ? $result['debtor']['Identifier'] : false);
+		endif;
+
+		return $this->Results( $result, 'Identifier');
 	}
 	
 	/**
@@ -135,6 +168,13 @@ class WeFactAPI
 		return $this->client->addSubscription($this->securitykey, $newSubscription);
 	}
 
+	function getSubscription($subscription_id) {
+		if( !$this->old_api ):
+			$result = WPWF_200::Request('subscription', 'show', array( 'Identifier' => $subscription_id ));
+		endif;
+		return $this->Results( $result, 'subscription');
+	}
+
 	/**
 	 * WeFactAPI::listSubscriptions()
 	 * 
@@ -144,8 +184,13 @@ class WeFactAPI
 	 * @param mixed $filter
 	 * @return
 	 */
-	function listSubscriptions($filter = array()){
-		return $this->client->listSubscriptions($this->securitykey, $filter);	
+	function listSubscriptions($filter = array()) {
+		if( $this->old_api ):
+			$result = WPWF_107::listSubscriptions($filter);
+		else:
+			$result = WPWF_200::Request('subscription', 'list', array_change_key_case($filter, CASE_LOWER));
+		endif;
+		return $this->Results( $result, 'subscriptions');
 	}
 	
 	/**
@@ -170,8 +215,13 @@ class WeFactAPI
 	 * @param string $security_code Security code for access to the API
 	 * @param mixed $newInvoice Array with optional keys as mentioned in documentation
 	 */
-	function addInvoice($newInvoice = array()){	
-		return $this->client->addInvoice($this->securitykey, $newInvoice);
+	function addInvoice($data = array()) {
+		if( $this->old_api ):
+			$result = WPWF_107::addInvoice($data);
+		else:
+			$result = WPWF_200::Request('invoice', 'add', array_change_key_case($data));
+		endif;
+		return $this->Results( $result, 'invoice' );
 	}
 	
 	/**
@@ -207,8 +257,18 @@ class WeFactAPI
 	 * @param string $security_code Security code for access to the API
 	 * @param mixed $filter Array with optional keys Sort (e.g. InvoiceCode), Order (e.g. ASC) and Search (e.g. WeFact).
 	 */
-	function listInvoices($filter = array()){
-		return $this->client->listInvoices($this->securitykey, $filter);	
+	function listInvoices( $filter = array() ) {
+		if( $this->old_api ):
+			$result = WPWF_107::listInvoices($filter);
+		else:
+			if( isset($filter['Debtor']) ):
+				$filter['searchat'] = 'Debtor';
+				$filter['searchfor'] = $filter['Debtor'];
+				unset($filter['Debtor']);
+			endif;
+			$result = WPWF_200::Request('invoice', 'list', array_change_key_case($filter, CASE_LOWER) );
+		endif;
+		return $this->Results( $result, 'invoices');
 	}
 	
 	/**
@@ -219,8 +279,13 @@ class WeFactAPI
 	 * @param string $security_code Security code for access to the API
 	 * @param mixed $invoice_id Identifier of the invoice, can be obtained by using the listInvoices() function
 	 */
-	function getInvoice($invoice_id){
-		return $this->client->getInvoice($this->securitykey, $invoice_id);
+	function getInvoice( $invoice_id ) {
+		if( $this->old_api ):
+			$result = WPWF_107::getInvoice($invoice_id);
+		else:
+			$result = WPWF_200::Request('invoice', 'show',  array('Identifier' => $invoice_id) );
+		endif;
+		return $this->Results( $result, 'invoice' );
 	}
 	
 	/**
@@ -244,7 +309,13 @@ class WeFactAPI
 	 * @param mixed $invoice_id Identifier of the invoice, can be obtained by using the listInvoices() function
 	 */
 	function downloadInvoice($invoice_id){
-		return $this->client->downloadInvoice($this->securitykey, $invoice_id);
+		if( $this->old_api ):
+			$result = WPWF_107::downloadInvoice($invoice_id);
+		else:
+			$result = WPWF_200::Request('invoice', 'download', array('Identifier' => $invoice_id));
+			$result['pdf'] = (isset($result['invoice']['Base64']) ? $result['invoice']['Base64'] : '');
+		endif;
+		return $this->Results( $result, 'PDF');
 	}
 	
 	/**
@@ -256,7 +327,12 @@ class WeFactAPI
 	 * @param mixed $invoice_id Identifier of the invoice, can be obtained by using the listInvoices() function
 	 */
 	function sendInvoiceByEmail($invoice_id){
-		return $this->client->sendInvoiceByEmail($this->securitykey, $invoice_id);
+		if( $this->old_api ):
+			$result = WPWF_107::sendInvoiceByEmail($invoice_id);
+		else:
+			$result = WPWF_200::Request('invoice', 'sendbyemail', array('Identifier' => $invoice_id));
+		endif;
+		return $this->Results( $result, 'invoice');
 	}
 	
 	/**
@@ -269,8 +345,15 @@ class WeFactAPI
 	 * @param string $paid 'true' = paid or 'false' = not paid
 	 * @param string $date You can parse the paydate
 	 */
-	function changeInvoiceStatus($invoice_id, $paid, $date = ''){
-		return $this->client->changeInvoiceStatus($this->securitykey, $invoice_id, $paid, $date);
+	function changeInvoiceStatus($invoice_id, $paid, $date = '') {
+		if( $this->old_api ):
+			$result = WPWF_107::changeInvoiceStatus($invoice_id, $paid);
+		else:
+			if( $paid == 'true' ):
+				$result = WPWF_200::Request('invoice', 'markaspaid', array('Identifier' => $invoice_id));
+			endif;
+		endif;
+		return $this->Results( $result, 'invoice');
 	}
 	
 	/**
@@ -291,8 +374,18 @@ class WeFactAPI
 	 * @param mixed $filter
 	 * @return
 	 */
-	function listPriceQuotes($filter = array()){
-		return $this->client->listPriceQuotes($this->securitykey, $filter);	
+	function listPriceQuotes($filter = array()) {
+		if( $this->old_api ):
+			$result = WPWF_107::listPriceQuotes($filter);
+		else:
+			if( isset($filter['Debtor']) ):
+				$filter['searchat'] = 'Debtor';
+				$filter['searchfor'] = $filter['Debtor'];
+				unset($filter['Debtor']);
+			endif;
+			$result = WPWF_200::Request('pricequote', 'list', array_change_key_case($filter, CASE_LOWER));
+		endif;
+		return $this->Results( $result, 'priceQuotes');
 	}
 	
 	/**
@@ -302,8 +395,13 @@ class WeFactAPI
 	 * @param mixed $pricequote_id
 	 * @return
 	 */
-	function getPriceQuote($pricequote_id){
-		return $this->client->getPriceQuote($this->securitykey, $pricequote_id);
+	function getPriceQuote($pricequote_id) {
+		if( $this->old_api ):
+			$result = WPWF_107::getPriceQuote($pricequote_id);
+		else:
+			$result = WPWF_200::Request('pricequote', 'show', array('Identifier' => $pricequote_id));
+		endif;
+		return $this->Results( $result, 'priceQuote');
 	}
 	
 	/**
@@ -349,8 +447,17 @@ class WeFactAPI
 	 * @param mixed $makeinvoice
 	 * @return
 	 */
-	function changePriceQuoteStatus($pricequote_id, $accept, $makeinvoice = 'false'){
-		return $this->client->changePriceQuoteStatus($this->securitykey, $pricequote_id, $accept, $makeinvoice);
+	function changePriceQuoteStatus($pricequote_id, $accept, $makeinvoice = 'false') {
+		if( $this->old_api ):
+			$result = WPWF_107::changePriceQuoteStatus($pricequote_id, $accept, $makeinvoice);
+		else:
+			if( $accept == 'true' ):
+				$result = WPWF_200::Request('pricequote', 'accept', array('Identifier' => $pricequote_id));
+			elseif( $accept == 'false' ):
+				$result = WPWF_200::Request('pricequote', 'decline', array('Identifier' => $pricequote_id));
+			endif;
+		endif;
+		return $this->Results( $result, 'products');
 	}
 	
 	/**
@@ -377,8 +484,31 @@ class WeFactAPI
 	 * @param mixed $filter
 	 * @return
 	 */
-	function listProducts($filter = array()){
-		return $this->client->listProducts($this->securitykey, $filter);	
+	function listProducts( $filter = array() ) {
+		if( $this->old_api ):
+			$result = WPWF_107::listProducts($filter);
+		else:
+			$result = WPWF_200::Request('product', 'list', array_change_key_case($filter, CASE_LOWER));
+		endif;
+		return $this->Results( $result, 'products');
+	}
+
+	function Results( $data, $type = '' ) {
+		$result = array( 'result' => array(), 'count' => 0 );
+		if( $this->old_api ):
+			if( isset( $data['Result'][ucfirst($type)] ) ):
+				$result['count'] 	= $data['Count'];
+				$result['result'] 	= $data['Result'][ucfirst($type)];
+				$result['status'] 	= $data['Status'];
+			endif;
+		else:
+			if( isset( $data[strtolower($type)] ) ):
+				$result['result'] = $data[strtolower($type)];
+				$result['status'] = $data['status'];
+			endif;
+		endif;
+
+		return $result;
 	}
 
 }

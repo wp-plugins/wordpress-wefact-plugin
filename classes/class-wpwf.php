@@ -74,6 +74,7 @@ class WPWF {
 	}
 
 	public static function messages($num) {
+		$num = ($num ? $num : $_GET['msg']);
 		switch ($num) {
 			case 1:
 				$message = __('The WeFact API settings must be entered in to use this plugin.', 'wp_wefact');
@@ -142,6 +143,35 @@ class WPWF {
 
 	public static function close_form() {
 		echo '</form>';
+	}
+
+	public static function get_admin_tabs() {
+	    global $submenu;
+	    $options = array('<h2 class="nav-tab-wrapper">');
+	    if ( is_array( $submenu ) && isset( $submenu['wefact'] ) ) {
+	        foreach ( (array) $submenu['wefact'] as $item) {
+	            if ( 'wefact' == $item[2] || $parent == $item[2] )
+	                continue;
+	            // 0 = name, 1 = capability, 2 = file
+	            if ( current_user_can($item[1]) ) {
+	            	$class = ( $_GET['page'] == $item[2] ? 'nav-tab-active' : '');
+	                $options[] = '<a class="nav-tab '.$class.'" href="admin.php?page='.$item[2].'">'.$item[0].'</a>';
+	                // $options[] = $item[2];
+	            }
+	        }
+	    }
+	    $options[] = '</h2>';
+	    return implode("\n", $options);
+	}
+
+	public static function get_ip() {
+		if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
+			return $_SERVER['HTTP_CLIENT_IP'];
+		} elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+			return $_SERVER['HTTP_X_FORWARDED_FOR'];
+		} elseif ( ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
+			return $_SERVER['REMOTE_ADDR'];
+		}
 	}
 
 	private function attr($attr = array()) {

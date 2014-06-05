@@ -1,31 +1,30 @@
 <div class="wrap wefact">
 	<?php echo WPWF::get_admin_tabs(); ?>
 	<div class="section">
-		<div class="grid-8">
-			<h2><?php _e('Open invoices', 'wp_wefact') ?></h2>
+		<div class="grid-12">
+			<h2><?php _e('Invoices overview', 'wp_wefact') ?></h2>
 			<?php $this->showMsg() ?>
-		</div>
-		<div class="grid-4">
-			<h2><?php _e('Statistics', 'wp_wefact') ?></h2>
 		</div>
 	</div>
 
 	<div class="section">
-		<div class="grid-8">	
+		<div class="grid-12">
 			<table class="widefat fixed" cellspacing="0">
 				<thead>
 					<tr>
 						<th><?php _e('Invoicenr.', 'wp_wefact') ?></th>
 						<th><?php _e('Debtor', 'wp_wefact') ?></th>
 						<th><?php _e('Price incl. VAT', 'wp_wefact') ?></th>
+						<th><?php _e('Invoice date', 'wp_wefact') ?></th>
 						<th><?php _e('Status', 'wp_wefact') ?></th>
 					</tr>
 				</thead>
-				 <tfoot>
-				    <tr>
+				<tfoot>
+					<tr>
 						<th><?php _e('Invoicenr.', 'wp_wefact') ?></th>
 						<th><?php _e('Debtor', 'wp_wefact') ?></th>
 						<th><?php _e('Price incl. VAT', 'wp_wefact') ?></th>
+						<th><?php _e('Invoice date', 'wp_wefact') ?></th>
 						<th><?php _e('Status', 'wp_wefact') ?></th>
 					</tr>
 				</tfoot>
@@ -44,28 +43,26 @@
 								</a>
 							</td>
 							<td><?php echo WPWF::price($row['AmountIncl']); ?></td>
+							<td><?php echo WPWF::dmy($row['Date']); ?></td>
 							<td>
-								<?php _e('Waiting for payment', 'wp_wefact') ?>
-								(<a href="<?php echo admin_url('admin.php?page=wpwf_view_invoice&id='.$row['Identifier'].'&status=4'); ?>"><?php _e('Paid', 'wp_wefact') ?></a>)
+								<?php echo WPWF::invoice_statuses($row['Status']) ?>
+								<?php if ($row['Status'] == 2): ?>
+									(<a href="<?php echo admin_url('admin.php?page=wpwf_view_invoice&id='.$row['Identifier'].'&status=4'); ?>"><?php _e('Paid', 'wp_wefact') ?></a>)
+								<?php endif; ?>
 							</td>
 						</tr>
 					<?php $i++; ?>
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-		</div>
-		<div class="grid-4">
-			<h3><?php _e('Revenue this year', 'wp_wefact') ?></h3>
-			<table>
-				<tr>
-					<td class="total_excl"><?php echo WPWF::price($total['revenue']) ?></td>
-					<td class="small"><?php _e('Excl. VAT', 'wp_wefact') ?></td>
-				</tr>
-				<tr>
-					<td class="total_incl grey"><?php echo WPWF::price($total['revenue'] * 1.21) ?></td>
-					<td class="small grey"><?php _e('Incl. VAT', 'wp_wefact') ?></td>
-				</tr>
-			</table>
+			<?php
+			if ($pages > 1) {
+				for($i = 1; $i <= $pages; $i++) {
+					$class = ($i == $curpage ? 'active' : '');
+					echo '<a href="admin.php?page=wefact&route=invoices&p=' . $i . '" class="pagination '.$class.'">' . $i . '</a>';
+				}
+			}
+			?>
 		</div>
 	</div>
 <?php include(WPWF_PLUGIN_DIR . '/views/footer.php'); ?>

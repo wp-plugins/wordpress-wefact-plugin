@@ -23,18 +23,27 @@ This plugin allows you to get easily information about your invoices and debtors
 
 The plugin also gives you the opportunity to show the latest invoice data via the dashboard widgets.
 
-*	**Opties / options **
-Functies / Functions:
-Overzicht facturen / list invoices
-Factuur details / invoice details
-Overzicht debiteuren / list debtors
-Debiteur gegevens / debtor details
+**Functies / Functions:**
+
+* Overzicht facturen / list invoices,
+* Factuur details / invoice details,
+* Overzicht debiteuren / list debtors,
+* Debiteur gegevens / debtor details
 
 Other pages in plugin
 Over + informatie / About + information
 Instellingen / settings 
 
-Tags: [tussendoor](http://wordpress.org/plugins/tags/tussendoor) [wefact](http://wordpress.org/plugins/tags/wefact) [administration](http://wordpress.org/plugins/tags/administration) [dashboard](http://wordpress.org/plugins/tags/dashboard) [widget](http://wordpress.org/plugins/tags/widget) [invoices](http://wordpress.org/plugins/tags/invoices) [debtors](http://wordpress.org/plugins/tags/debtors)
+= Custom / Maatwerk plugins =
+
+Are you looking for custom made solutions or plugins for your WordPress site? You can always contact us via support@tussendoor.nl. Please provide us as much information as possible. You can also check our other plugins via the [Tussendoor tag](https://wordpress.org/plugins/tags/tussendoor) or via our [profile page](https://profiles.wordpress.org/tussendoor/) here at WordPress. 
+
+Some of our premium plugins can be found at [Codecanyon](http://codecanyon.net/user/Tussendoor/portfolio) or our [own website](http://www.tussendoor.nl/wordpress-plugins/).
+
+= Nederlands =
+Ben je op zoek naar maatwerk oplossingen of pugins voor je WordPress website? Dan kun je altijd contact met ons opnemen via support@tussendoor.nl. Verschaf aub zo veel mogelijk  informatie bij je aanvraag. Je kunt ook een kijkje nemen bij onze andere plugins via de [Tussendoor tag](https://wordpress.org/plugins/tags/tussendoor) of op ons [profiel hier op WordPress](https://profiles.wordpress.org/tussendoor/).
+
+Een aantal premium plugins zijn te vinden op [onze eigen website](http://www.tussendoor.nl/wordpress-plugins/) en op [Codecanyon](http://codecanyon.net/user/Tussendoor/portfolio).
 
 == Installation ==
 

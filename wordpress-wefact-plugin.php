@@ -3,7 +3,7 @@
 Plugin Name: Wordpress WeFact plugin
 Plugin URI: http://wordpress.org/plugins/wordpress-wefact-plugin/
 Description: WeFact Plugin. For the installation guide <a href="http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/">click here.</a> | Voor de installatie handleiding <a href="http://www.tussendoor.nl/wordpress-plugins/wefact-wordpress-plugin/">klik hier.</a>
-Version: 2.4
+Version: 2.4.1
 Author: Tussendoor internet & marketing
 Author URI: http://www.tussendoor.nl
 Tested up to: 3.9

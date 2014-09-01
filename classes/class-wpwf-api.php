@@ -39,7 +39,7 @@ class WPWF_API {
 	
 	private function check_connection() {
 		if( $this->connection && (isset($_POST['wpwf_api_key']) || isset($_POST['wc_wefact_key']))  ):
-			$result = self::listInvoices();
+			$result = self::listDebtors();
 			if( isset($_POST['wpwf_api_key']) ): $type = 'wpwf'; elseif( $_POST['wc_wefact_key'] ): $type = 'wcwf'; endif;
 
 			if( $result['status'] == 'success' ):
